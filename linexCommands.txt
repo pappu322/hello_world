@@ -1,0 +1,150 @@
+Instance:  i-04c59363331c12bba 
+Elastic IP: 52.45.107.215
+
+tomcat Server IP :54.161.77.172
+
+docker: 3.82.241.107
+
+Git : https://github.com/yankils/hello-world
+for clone :- https://github.com/yankils/hello-world.git
+
+
+1) sudo su -  : to set the home path.
+2) yum remove java-1.7.0*  : To remove the java in the instance.
+3) yum install java-1.8*   : To install java in to instance.
+4) find /usr/lib/jvm/java-1.8* | head -n 3
+5) ls -l /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64/jre/^C  : to set the class path
+6) set the home path
+	a) cd ~
+	b) VI .bash_profile : it is normat file.to save this file ":wq". to exit this file :q
+7)echo $JAVA_HOME to know the java home path.
+8) install junckins
+	1) get the commands form "https://pkg.jenkins.io/redhat-stable/" and run the commands
+	2) yum install jenkins
+	3) service jenkins status
+	4) service jenkins start
+
+9) cat /var/lib/jenkins/secrets/initialAdminPassword : TO GET THE PASSWORD OF JENKINS
+
+10) yum install git -y
+
+11)wget <http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz> : to download the file from browse
+12)tar -xvzf apache-maven-3.6.3-bin.tar.gz :  untar the gz file
+13)pwd : to know the full path of currenct folder.
+
+
+
+14) default path   cd /var/lib/jenkins/workspace
+15) https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.53/bin/apache-tomcat-8.5.53.tar.gz
+16) sh startup.sh : to start tomcat server in linux
+17) find / -name context.xml : to find the file in the folder.
+
+<role rolename="manager-gui"/>
+	<role rolename="manager-script"/>
+	<role rolename="manager-jmx"/>
+	<role rolename="manager-status"/>
+	<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+	<user username="mscript1" password="script" roles="manager-script"/>
+	<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+
+Docker:-
+***************
+
+check the demon is up
+-----------------------
+service docker status
+
+service docker start
+-----------------------
+
+pull image
+--------
+docker pull [image tag name]
+
+images list
+---------------
+docker images or docker image ls
+
+containers list
+-------------------
+docker ps
+
+docker ps -a : status of the container
+
+run the container
+---------------------
+docker run --name [container-name] -p 8080(your application running port):8080(external port) image tag.
+
+To go in to the container
+---------------------------------------
+docker exec -it [container name] /bin/bash
+
+create user in docker
+----------------------
+username dcradmin
+
+create password to the users
+-----------------------------
+passwd dcradmin
+
+groups list
+-----------
+cat /etc/group
+
+add user into docker group
+------------------------
+usermod -aG [groupname] [username]
+
+know the userinfo
+-------------
+id username
+
+know ip address
+--------------------------------
+ip addr
+
+update the sshd service to allow password authendication
+----------------------------------------
+cd /etc/ssh/sshd_config /
+
+
+
+
+siva.nadupuru@gmail.com
+Boom92
+
+pappukiran.322@gmail.com
+Kiran@322
+
+
+
+HBSUPO6X190000862
+
+
+GitHub
+UserName: vijay322Git
+Pasword: Kiran@322
+
+
+
+
+
+Play with docker
+--------------------------
+https://labs.play-with-docker.com/p/buh51fpqckh000enn3n0#buh51fpq_buh51thqckh000enn3s0
+
+
+
+C:\Users\mitsind322\git\TestGit
+
+
+change the local destination path in eclips
+
+D:\LocalGit
+
+
+
+
+2020-11-18 17:06:26 INFO  com.ibm.icm.upladsevices.ServiceActions ::: execute():32 - -------execute() starts---------
+2020-11-18 17:06:26 INFO  com.ibm.icm.upladsevices.ServiceActions ::: execute():44 - PropFile Pata:::\IBM\conf_files\location.properties
